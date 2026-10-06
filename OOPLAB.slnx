@@ -1,5 +1,5 @@
 <Solution>
   <Folder Name="/labs/">
-    <Project Path="lab1/lab1.csproj" />
+    <Project Path="Labs/Lab1/Lab1.csproj" />
   </Folder>
 </Solution>
