@@ -98,12 +98,8 @@
 
         **private void module1\_Load(object sender, EventArgs e)**  
         **{**  
-            **listBox1.Items.Add("ІМ-51");**  
-            **listBox1.Items.Add("ІМ-52");**  
-            **listBox1.Items.Add("ІМ-53");**  
-            **listBox1.Items.Add("ІМ-54");**  
-            **listBox1.Items.Add("ІМ-55");**  
-            **listBox1.Items.Add("ІМ-о51");**  
+**string\[\] groups \= { "ІМ-51", "ІМ-52", "ІМ-53", "ІМ-54", "ІМ-55", "ІМ-о51" };**  
+**listBox1.Items.AddRange(groups);**  
         **}**  
         **private void listBox1\_SelectedIndexChanged(object sender, EventArgs e)**  
         **{**  
