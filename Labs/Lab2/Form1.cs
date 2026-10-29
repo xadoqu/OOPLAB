@@ -134,7 +134,32 @@ namespace Lab2
             {
                 using (Pen rubberPen = new Pen(Color.Black, 1) { DashStyle = DashStyle.Dash })
                 {
-                    g.DrawLine(rubberPen, startPoint, currentPoint);
+                    int x1 = startPoint.X;
+                    int y1 = startPoint.Y;
+                    int x2 = currentPoint.X;
+                    int y2 = currentPoint.Y;
+
+                    switch (currentTool)
+                    {
+                        case ToolType.Point:
+                            g.DrawLine(rubberPen, startPoint, currentPoint);
+                            break;
+                        case ToolType.Line:
+                            g.DrawLine(rubberPen, startPoint, currentPoint);
+                            break;
+                        case ToolType.Rectangle:
+                            int rx = Math.Abs(x2 - x1);
+                            int ry = Math.Abs(y2 - y1);
+                            g.DrawRectangle(rubberPen, x1 - rx, y1 - ry, 2 * rx, 2 * ry);
+                            break;
+                        case ToolType.Ellipse:
+                            int left = Math.Min(x1, x2);
+                            int top = Math.Min(y1, y2);
+                            int width = Math.Abs(x2 - x1);
+                            int height = Math.Abs(y2 - y1);
+                            g.DrawEllipse(rubberPen, left, top, width, height);
+                            break;
+                    }
                 }
             }
         }

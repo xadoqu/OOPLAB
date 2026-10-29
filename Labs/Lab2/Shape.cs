@@ -62,7 +62,7 @@ namespace Lab2
     public class EllipseShape : Shape
     {
         public override void Draw(Graphics g)
-        {
+        {   
             int left = Math.Min(x1, x2);
             int top = Math.Min(y1, y2);
             int width = Math.Abs(x2 - x1);
